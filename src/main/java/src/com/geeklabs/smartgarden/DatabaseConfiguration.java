@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import src.com.geeklabs.smartgarden.security.SmartGardenAuditAware;
 
 /**
  * Created by vinay on 6/16/17.
@@ -59,9 +60,9 @@ public class DatabaseConfiguration {
         return new JodaModule();
     }
 
-//    @Bean
-//    public AuditorAware<String> auditorProvider() {
-//        return new H2OAuditorAware();
-//    }
+    @Bean
+    public AuditorAware<String> auditorProvider() {
+        return new SmartGardenAuditAware();
+    }
 
 }
