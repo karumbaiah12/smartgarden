@@ -10,7 +10,7 @@ package src.com.geeklabs.smartgarden.entities;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.hubbleconnected.server.config.mapper.annotations.SkipPatching;
+import src.com.geeklabs.smartgarden.annotations.SkipPatching;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
